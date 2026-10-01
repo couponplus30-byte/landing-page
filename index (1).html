@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مِزاج | قهوتك على مزاجك تماماً</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { tajawal: ['Tajawal', 'sans-serif'], amiri: ['Amiri', 'serif'] },
+      colors: {
+        ink: '#1A1A18',
+        cream: '#FFFBF5',
+        sand: '#F5EFE6',
+        clay: '#C67C4E',
+        clayDark: '#A65E32',
+        olive: '#2D3A2E',
+        stoneM: '#8A857E'
+      }
+    }
+  }
+}
+</script>
+<style>
+*{font-family:'Tajawal',sans-serif}
+html{scroll-behavior:smooth}
+::selection{background:#C67C4E;color:white}
+.hero-pattern{
+  background-image: radial-gradient(#C67C4E 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.06;
+}
+.glass{
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.85);
+}
+</style>
+</head>
+<body class="bg-cream text-ink antialiased overflow-x-hidden">
+
+<nav id="navbar" class="fixed top-0 w-full z-40 transition-all duration-300 bg-cream/80 glass border-b border-transparent">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+<div class="flex justify-between items-center h-[72px]">
+<a href="#" class="flex items-center gap-3">
+<div class="w-9 h-9 bg-ink rounded-xl flex items-center justify-center text-white font-black text-lg">م</div>
+<span class="font-black text-[22px] tracking-tight">مِزاج</span>
+<span class="hidden sm:inline text-xs bg-clay text-white px-2 py-1 rounded-full font-bold mr-2">قهوة مختصة</span>
+</a>
+<div class="hidden lg:flex items-center gap-8 font-medium text-[15px]">
+<a href="#how" class="hover:text-clay transition">كيف نعمل</a>
+<a href="#products" class="hover:text-clay transition">المنتجات</a>
+<a href="#pricing" class="hover:text-clay transition">الاشتراكات</a>
+<a href="#faq" class="hover:text-clay transition">الأسئلة</a>
+</div>
+<div class="hidden lg:flex items-center gap-3">
+<a href="#pricing" class="px-6 py-2.5 rounded-full border border-ink/15 font-bold hover:bg-ink hover:text-white transition text-sm">تسجيل دخول</a>
+<a href="#pricing" class="px-6 py-2.5 rounded-full bg-clay text-white font-bold hover:bg-clayDark transition shadow-lg shadow-clay/20 text-sm">ابدأ مزاجك الآن</a>
+</div>
+<button id="menuBtn" class="lg:hidden w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center">
+<i class="fa-solid fa-bars"></i>
+</button>
+</div>
+</div>
+<div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-black/5 px-6 py-6 space-y-4">
+<a href="#how" class="block font-bold py-2">كيف نعمل</a>
+<a href="#products" class="block font-bold py-2">المنتجات</a>
+<a href="#pricing" class="block font-bold py-2">الاشتراكات</a>
+<a href="#faq" class="block font-bold py-2">الأسئلة الشائعة</a>
+<a href="#pricing" class="block text-center mt-4 bg-clay text-white py-3 rounded-full font-black">ابدأ الآن — أول كيس مجاناً</a>
+</div>
+</nav>
+
+<section class="relative pt-[92px] overflow-hidden">
+<div class="hero-pattern absolute inset-0 pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+<div class="grid lg:grid-cols-12 gap-10 items-center py-8 lg:py-14">
+<div class="lg:col-span-6 relative z-10">
+<div class="inline-flex items-center gap-2 bg-white border border-black/5 rounded-full px-4 py-2 text-sm font-bold shadow-sm">
+<span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+تحميص يومي في الرياض • توصيل خلال 24 ساعة
+<span class="bg-sand rounded-full px-2 py-0.5 text-xs">جديد</span>
+</div>
+<h1 class="mt-6 font-black leading-[0.95] text-[42px] sm:text-[56px] lg:text-[68px] tracking-tight">
+<span class="font-amiri font-normal italic text-clay block text-[38px] lg:text-[52px]">قهوتك،</span>
+على مزاجك<br>
+<span class="relative inline-block">تماماً.
+<svg class="absolute -bottom-2 left-0 w-full h-3 text-clay/30" viewBox="0 0 200 12" preserveAspectRatio="none"><path d="M2 8 Q 100 0 198 8" stroke="currentColor" stroke-width="8" fill="none" stroke-linecap="round"/></svg>
+</span>
+</h1>
+<p class="mt-6 text-[18px] leading-8 text-stoneM max-w-[560px] font-medium">
+ليست كل الأيام متشابهة. مزاجك يختار قهوتك. نحن نحمص 3 درجات، نطحن 4 طرق، ونرسل لك بوكس شهري يتغير حسب ذوقك الفعلي — ليس توقعات عامة.
+</p>
+<div class="mt-8 flex flex-col sm:flex-row gap-3">
+<a href="#pricing" class="inline-flex justify-center items-center gap-2 bg-ink text-white px-8 py-4 rounded-full font-black text-[16px] hover:bg-black transition">
+ابدأ اختبار المزاج — 60 ثانية
+<i class="fa-solid fa-arrow-left"></i>
+</a>
+<a href="#products" class="inline-flex justify-center items-center gap-2 bg-white border border-black/10 px-8 py-4 rounded-full font-bold hover:bg-sand transition">
+<i class="fa-solid fa-play text-clay"></i>
+شاهد التحميص الحي
+</a>
+</div>
+<div class="mt-8 flex items-center gap-6">
+<div class="flex -space-x-2 space-x-reverse">
+<img src="https://i.pravatar.cc/100?img=33" class="w-9 h-9 rounded-full border-2 border-white object-cover">
+<img src="https://i.pravatar.cc/100?img=14" class="w-9 h-9 rounded-full border-2 border-white object-cover">
+<img src="https://i.pravatar.cc/100?img=32" class="w-9 h-9 rounded-full border-2 border-white object-cover">
+<div class="w-9 h-9 rounded-full bg-ink text-white border-2 border-white flex items-center justify-center text-xs font-black">+2k</div>
+</div>
+<div class="text-sm leading-4">
+<div class="flex text-amber-500 text-xs gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span class="text-ink font-black mr-1">4.9/5</span></div>
+<span class="text-stoneM font-medium">من 2,847 عميل سعيد</span>
+</div>
+<div class="hidden sm:flex items-center gap-2 pr-6 border-r border-black/10">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="w-6 h-6 opacity-60">
+<span class="text-xs font-bold text-stoneM">موثق من هيئة الغذاء</span>
+</div>
+</div>
+</div>
+
+<div class="lg:col-span-6 relative">
+<div class="relative bg-white rounded-[32px] p-3 shadow-[0_32px_80px_rgba(0,0,0,0.12)] border border-black/5">
+<div class="grid grid-cols-5 gap-3">
+<div class="col-span-3 space-y-3">
+<div class="relative rounded-[24px] overflow-hidden h-[380px] bg-sand">
+<img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80" alt="قهوة مختصة" class="w-full h-full object-cover">
+<div class="absolute bottom-3 right-3 left-3 bg-white/95 backdrop-blur rounded-2xl p-3 flex items-center justify-between">
+<div>
+<p class="text-xs text-stoneM font-bold">درجة التحميص اليوم</p>
+<p class="font-black text-sm">متوسطة - برازيلي / إثيوبي</p>
+</div>
+<span class="w-10 h-10 rounded-full bg-clay text-white flex items-center justify-center"><i class="fa-solid fa-fire"></i></span>
+</div>
+<div class="absolute top-3 right-3 bg-ink text-white text-xs font-black px-3 py-1.5 rounded-full">تحميص اليوم 06:00 ص</div>
+</div>
+</div>
+<div class="col-span-2 space-y-3">
+<div class="bg-olive rounded-[24px] p-5 text-white h-[185px] flex flex-col justify-between">
+<p class="text-xs opacity-70 font-bold">اختبار المزاج</p>
+<h3 class="font-black text-[18px] leading-6">هل أنت<br>مزاج رايق<br>ولا مصحصح؟</h3>
+<button class="bg-white text-olive rounded-full py-2 text-sm font-black">جاوب الآن</button>
+</div>
+<div class="rounded-[24px] overflow-hidden h-[185px] relative">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80" class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-3 right-3 text-white">
+<p class="font-black text-sm">بوكس المزاج</p>
+<p class="text-xs opacity-80">3 أكياس + كارت ذوق</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-3 grid grid-cols-3 gap-3">
+<div class="bg-sand rounded-2xl p-4 text-center">
+<p class="text-2xl font-black">48</p>
+<p class="text-xs font-bold text-stoneM">ساعة من التحميص للباب</p>
+</div>
+<div class="bg-sand rounded-2xl p-4 text-center">
+<p class="text-2xl font-black">+12</p>
+<p class="text-xs font-bold text-stoneM">محمصة شريكة</p>
+</div>
+<div class="bg-clay rounded-2xl p-4 text-center text-white">
+<p class="text-2xl font-black">100%</p>
+<p class="text-xs font-bold opacity-90">ضمان استرجاع</p>
+</div>
+</div>
+</div>
+<div class="absolute -z-10 -top-10 -left-10 w-72 h-72 bg-clay/15 rounded-full blur-3xl"></div>
+<div class="absolute -z-10 -bottom-10 -right-10 w-72 h-72 bg-olive/10 rounded-full blur-3xl"></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-6 border-y border-black/5 bg-white">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-8 flex flex-wrap items-center justify-between gap-6 opacity-60">
+<span class="text-xs font-black tracking-widest text-stoneM">ظهرنا في</span>
+<span class="font-black text-lg">Forbes</span>
+<span class="font-amiri text-xl">الشرق الأوسط</span>
+<span class="font-black">HOSPITALITY</span>
+<span class="font-black tracking-tight">ARAB NEWS</span>
+<span class="font-bold">موسم الرياض</span>
+</div>
+</section>
+
+<section id="how" class="py-16 lg:py-24 bg-sand/50">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+<div>
+<p class="text-clay font-black text-sm tracking-widest">كيف يعمل مِزاج؟</p>
+<h2 class="font-black text-[36px] lg:text-[44px] leading-none mt-2">ثلاث خطوات<br><span class="text-stoneM font-light">وقهوتك تفهمك.</span></h2>
+</div>
+<p class="max-w-md text-stoneM font-medium leading-7">بدون استبيانات مملة. 6 أسئلة بصرية، وخوارزمية ذوق تتعلم من كل رشفة تقيمها.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="bg-white rounded-[28px] p-8 border border-black/5 relative overflow-hidden group hover:shadow-xl transition">
+<span class="absolute top-6 left-6 text-[56px] font-black text-black/[0.04]">01</span>
+<div class="w-12 h-12 rounded-2xl bg-ink text-white flex items-center justify-center text-lg"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+<h3 class="font-black text-xl mt-6">اختبار المزاج</h3>
+<p class="text-stoneM font-medium leading-7 mt-3 text-[15px]">اختر صور، روائح، وأوقاتك المفضلة. نحدد بروفايلك: كلاسيكي، مغامر، أو متوازن.</p>
+<div class="mt-6 flex gap-2">
+<span class="px-3 py-1.5 bg-sand rounded-full text-xs font-bold">60 ثانية</span>
+<span class="px-3 py-1.5 bg-sand rounded-full text-xs font-bold">بدون تسجيل</span>
+</div>
+</div>
+<div class="bg-white rounded-[28px] p-8 border border-black/5 relative overflow-hidden group hover:shadow-xl transition">
+<span class="absolute top-6 left-6 text-[56px] font-black text-black/[0.04]">02</span>
+<div class="w-12 h-12 rounded-2xl bg-clay text-white flex items-center justify-center text-lg"><i class="fa-solid fa-fire-burner"></i></div>
+<h3 class="font-black text-xl mt-6">تحميص حسب الطلب</h3>
+<p class="text-stoneM font-medium leading-7 mt-3 text-[15px]">نحمص لك فقط بعد الطلب. تختار الطحنة والكمية، ونرسل خلال 24 ساعة بتغليف يحفظ النكهة.</p>
+<div class="mt-6 flex gap-2">
+<span class="px-3 py-1.5 bg-sand rounded-full text-xs font-bold">تحميص يومي</span>
+<span class="px-3 py-1.5 bg-sand rounded-full text-xs font-bold">تغليف نيتروجين</span>
+</div>
+</div>
+<div class="bg-ink rounded-[28px] p-8 text-white relative overflow-hidden group hover:shadow-xl transition">
+<span class="absolute top-6 left-6 text-[56px] font-black text-white/10">03</span>
+<div class="w-12 h-12 rounded-2xl bg-white text-ink flex items-center justify-center text-lg"><i class="fa-solid fa-heart"></i></div>
+<h3 class="font-black text-xl mt-6">يتعلم ذوقك</h3>
+<p class="text-white/70 font-medium leading-7 mt-3 text-[15px]">بعد كل بوكس تقيّم النكهة بزر واحد. البوكس القادم يصبح أدق — كأن عندك باريستا شخصي.</p>
+<div class="mt-6 flex gap-2">
+<span class="px-3 py-1.5 bg-white/10 rounded-full text-xs font-bold">ذكاء ذوق</span>
+<span class="px-3 py-1.5 bg-clay rounded-full text-xs font-bold text-white">أدق كل مرة</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="products" class="py-16 lg:py-24 bg-white">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+<div class="flex flex-wrap items-end justify-between gap-4 mb-10">
+<h2 class="font-black text-[34px] lg:text-[42px] leading-none">اختر مزاجك <span class="text-clay">هذا الشهر</span></h2>
+<div class="flex gap-2">
+<button class="filterBtn active px-5 py-2.5 rounded-full bg-ink text-white font-bold text-sm" data-filter="all">الكل</button>
+<button class="filterBtn px-5 py-2.5 rounded-full bg-sand font-bold text-sm" data-filter="light">فاتح</button>
+<button class="filterBtn px-5 py-2.5 rounded-full bg-sand font-bold text-sm" data-filter="medium">متوسط</button>
+<button class="filterBtn px-5 py-2.5 rounded-full bg-sand font-bold text-sm" data-filter="dark">غامق</button>
+</div>
+</div>
+<div id="productGrid" class="grid md:grid-cols-3 gap-6">
+<div class="product group bg-cream rounded-[28px] p-4 border border-black/5 hover:shadow-xl transition" data-cat="medium">
+<div class="rounded-[20px] overflow-hidden h-[280px] relative bg-white">
+<img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+<span class="absolute top-3 right-3 bg-white px-3 py-1 rounded-full text-xs font-black shadow">الأكثر طلباً</span>
+</div>
+<div class="p-3">
+<h3 class="font-black text-lg">مزاج رايق — متوسط</h3>
+<p class="text-stoneM text-sm font-medium">شوكولاتة، كراميل، قوام حريري • 250غ</p>
+<div class="flex items-center justify-between mt-4">
+<span class="font-black text-xl">89 ر.س <span class="text-stoneM text-sm font-medium line-through">110</span></span>
+<button class="w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center hover:bg-clay transition"><i class="fa-solid fa-bag-shopping text-sm"></i></button>
+</div>
+</div>
+</div>
+<div class="product group bg-cream rounded-[28px] p-4 border border-black/5 hover:shadow-xl transition" data-cat="light">
+<div class="rounded-[20px] overflow-hidden h-[280px] relative bg-white">
+<img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+<span class="absolute top-3 right-3 bg-clay text-white px-3 py-1 rounded-full text-xs font-black">فاتح • فواكه</span>
+</div>
+<div class="p-3">
+<h3 class="font-black text-lg">مزاج مصحصح — فاتح</h3>
+<p class="text-stoneM text-sm font-medium">ياسمين، توت، حمضية مشرقة • 250غ</p>
+<div class="flex items-center justify-between mt-4">
+<span class="font-black text-xl">95 ر.س</span>
+<button class="w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center hover:bg-clay transition"><i class="fa-solid fa-bag-shopping text-sm"></i></button>
+</div>
+</div>
+</div>
+<div class="product group bg-cream rounded-[28px] p-4 border border-black/5 hover:shadow-xl transition" data-cat="dark">
+<div class="rounded-[20px] overflow-hidden h-[280px] relative bg-white">
+<img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+<span class="absolute top-3 right-3 bg-ink text-white px-3 py-1 rounded-full text-xs font-black">غامق • قوي</span>
+</div>
+<div class="p-3">
+<h3 class="font-black text-lg">مزاج ثقيل — غامق</h3>
+<p class="text-stoneM text-sm font-medium">كاكاو داكن، جوز، دخاني • 250غ</p>
+<div class="flex items-center justify-between mt-4">
+<span class="font-black text-xl">85 ر.س</span>
+<button class="w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center hover:bg-clay transition"><i class="fa-solid fa-bag-shopping text-sm"></i></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-16 bg-ink text-white relative overflow-hidden">
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(white 1px, transparent 1px); background-size: 22px 22px;"></div>
+<div class="max-w-[1280px] mx-auto px-6 lg:px-8 relative">
+<div class="grid lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-5">
+<p class="text-clay font-black tracking-widest text-sm">ماذا يقولون عن مزاج؟</p>
+<h2 class="font-black text-[38px] leading-none mt-3">قهوة<br>تخلي يومك<br><span class="text-white/50 font-light">أحلى.</span></h2>
+<div class="mt-8 flex gap-3">
+<button id="prevTest" class="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-ink transition"><i class="fa-solid fa-arrow-right"></i></button>
+<button id="nextTest" class="w-11 h-11 rounded-full bg-white text-ink flex items-center justify-center hover:bg-clay hover:text-white transition"><i class="fa-solid fa-arrow-left"></i></button>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div id="testimonialTrack" class="grid md:grid-cols-2 gap-4">
+<div class="bg-white text-ink rounded-[24px] p-6">
+<div class="flex text-amber-500 text-sm gap-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<p class="font-bold leading-7 mt-3">“أول مرة قهوة توصلي مطحونة صح للإيروبرس. بوكس رايق كان بالضبط اللي أحتاجه بعد الدوام.”</p>
+<div class="flex items-center gap-3 mt-6">
+<img src="https://i.pravatar.cc/100?img=15" class="w-10 h-10 rounded-full">
+<div><p class="font-black text-sm">سارة العتيبي</p><p class="text-xs text-stoneM">مصممة — الرياض</p></div>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur border border-white/10 rounded-[24px] p-6">
+<div class="flex text-amber-400 text-sm gap-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<p class="font-bold leading-7 mt-3 text-white">“فكرة اختبار المزاج عبقرية. كل شهر القهوة تصير أقرب لذوقي. اشتراكي صار 8 شهور.”</p>
+<div class="flex items-center gap-3 mt-6">
+<img src="https://i.pravatar.cc/100?img=12" class="w-10 h-10 rounded-full">
+<div><p class="font-black text-sm text-white">عبدالله فهد</p><p class="text-xs text-white/60">مهندس — جدة</p></div>
+</div>
+</div>
+</div>
+<div class="mt-6 bg-clay rounded-[20px] p-4 flex items-center justify-between">
+<div class="flex items-center gap-3 text-white">
+<span class="w-10 h-10 rounded-full bg-white text-clay flex items-center justify-center"><i class="fa-solid fa-gift"></i></span>
+<div><p class="font-black text-sm">هدية مع كل بوكس ثالث</p><p class="text-xs opacity-80">كوب سيراميك مزاج مجاناً</p></div>
+</div>
+<span class="hidden sm:block text-white/80 text-xs font-bold">محدود هذا الشهر</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="pricing" class="py-16 lg:py-24 bg-cream">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto">
+<p class="text-clay font-black tracking-widest text-sm">اشتراكات مرنة</p>
+<h2 class="font-black text-[36px] lg:text-[46px] leading-none mt-2">ادفع على مزاجك،<br>وألغِ أي وقت.</h2>
+<p class="text-stoneM font-medium mt-4 leading-7">بدون عقود. بدون رسوم خفية. تقدر تغير الطحنة، الكمية، أو توقف الاشتراك بضغطة.</p>
+<div class="inline-flex bg-white p-1.5 rounded-full border border-black/5 mt-6">
+<button id="monthlyBtn" class="px-6 py-2 rounded-full bg-ink text-white font-black text-sm">شهري</button>
+<button id="yearlyBtn" class="px-6 py-2 rounded-full font-bold text-sm text-stoneM">سنوي — وفر 20%</button>
+</div>
+</div>
+<div class="grid lg:grid-cols-3 gap-6 mt-10 items-start">
+<div class="bg-white rounded-[28px] p-8 border border-black/5">
+<h3 class="font-black text-xl">تجربة</h3>
+<p class="text-stoneM text-sm font-medium mt-1">جرب مرة واحدة بدون التزام</p>
+<p class="mt-6"><span class="text-[42px] font-black leading-none price" data-monthly="89" data-yearly="89">89</span><span class="font-bold"> ر.س</span><span class="text-stoneM text-sm"> / بوكس</span></p>
+<ul class="mt-6 space-y-3 text-sm font-medium">
+<li class="flex gap-2"><i class="fa-solid fa-check text-green-600 mt-1"></i> كيس 250غ من اختيارك</li>
+<li class="flex gap-2"><i class="fa-solid fa-check text-green-600 mt-1"></i> طحن حسب أداتك</li>
+<li class="flex gap-2"><i class="fa-solid fa-check text-green-600 mt-1"></i> شحن مجاني + كارت تذوق</li>
+</ul>
+<a href="#" class="block text-center mt-8 py-3.5 rounded-full border border-ink font-black hover:bg-ink hover:text-white transition">اطلب بوكس واحد</a>
+</div>
+<div class="bg-ink text-white rounded-[28px] p-8 relative overflow-hidden shadow-2xl lg:scale-[1.03]">
+<div class="absolute top-4 left-4 bg-clay text-white text-xs font-black px-3 py-1 rounded-full">الأكثر اختياراً</div>
+<h3 class="font-black text-xl">مزاج شهري</h3>
+<p class="text-white/60 text-sm font-medium mt-1">بوكس يتطور مع ذوقك كل شهر</p>
+<p class="mt-6"><span class="text-[42px] font-black leading-none price" data-monthly="149" data-yearly="119">149</span><span class="font-bold"> ر.س</span><span class="text-white/60 text-sm"> / شهر</span></p>
+<p class="text-xs text-white/60 font-bold mt-1">يشمل 2 كيس 250غ + مفاجأة</p>
+<ul class="mt-6 space-y-3 text-sm font-medium">
+<li class="flex gap-2"><i class="fa-solid fa-check text-clay mt-1"></i> اختبار مزاج + تخصيص ذكي</li>
+<li class="flex gap-2"><i class="fa-solid fa-check text-clay mt-1"></i> تحميص حسب الطلب كل شهر</li>
+<li class="flex gap-2"><i class="fa-solid fa-check text-clay mt-1"></i> تقدر تغير أو توقف أي وقت</li>
+<li class="flex gap-2"><i class="fa-solid fa-check text-clay mt-1"></i> أول بوكس مجاناً عند السنوي</li>
+</ul>
+<a href="#" class="block text-center mt-8 py-3.5 rounded-full bg-clay font-black hover:bg-clayDark transition">ابدأ اشتراكك — أول كيس مجاناً</a>
+<p class="text-center text-xs text-white/50 mt-3">بدون التزام • إلغاء بضغطة</p>
+</div>
+<div class="bg-white rounded-[28px] p-8 border border-black/5">
+<h3 class="font-black text-xl">عائلة / مكتب</h3>
+<p class="text-stoneM text-sm font-medium mt-1">للبيت أو الدوام — كمية أكبر</p>
+<p class="mt-6"><span class="text-[42px] font-black leading-none price" data-monthly="279" data-yearly="223">279</span><span class="font-bold"> ر.س</span><span class="text-stoneM text-sm"> / شهر</span></p>
+<ul class="mt-6 space-y-3 text-sm font-medium">
+<li class="flex gap-2"><i class="fa-solid fa-check text-green-600 mt-1"></i> 4 أكياس 250غ (1 كغ)</li>
+<li class="flex gap-2"><i class="fa-solid fa-check text-green-600 mt-1"></i> طحنتين مختلفتين</li>
+<li class="flex gap-2"><i class="fa-solid fa-check text-green-600 mt-1"></i> أولوية دعم + هدية ربع سنوية</li>
+</ul>
+<a href="#" class="block text-center mt-8 py-3.5 rounded-full border border-ink font-black hover:bg-ink hover:text-white transition">للشركات والمكاتب</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="faq" class="py-16 bg-white">
+<div class="max-w-[980px] mx-auto px-6 lg:px-8">
+<div class="text-center">
+<h2 class="font-black text-[32px] lg:text-[40px]">أسئلة على مزاجك</h2>
+<p class="text-stoneM font-medium mt-2">كل شيء تريد معرفته قبل أول رشفة.</p>
+</div>
+<div class="mt-10 space-y-3">
+<div class="faq-item bg-cream rounded-2xl border border-black/5 overflow-hidden">
+<button class="faq-btn w-full flex justify-between items-center p-6 text-right font-black text-[16px]">هل أقدر أغير الطحنة بعد الاشتراك؟ <span class="w-8 h-8 rounded-full bg-white border flex items-center justify-center shrink-0"><i class="fa-solid fa-plus text-xs"></i></span></button>
+<div class="faq-answer hidden px-6 pb-6 text-stoneM font-medium leading-7 text-[15px]">نعم، من لوحة التحكم تقدر تغير الطحنة (إسبرسو، فلتر، تركي، كولد برو) قبل 48 ساعة من الشحن القادم. وحتى تقدر تطلب طحنتين في نفس البوكس لخطة العائلة.</div>
+</div>
+<div class="faq-item bg-cream rounded-2xl border border-black/5 overflow-hidden">
+<button class="faq-btn w-full flex justify-between items-center p-6 text-right font-black text-[16px]">كم مدة التوصيل؟ وهل الشحن مجاني؟ <span class="w-8 h-8 rounded-full bg-white border flex items-center justify-center shrink-0"><i class="fa-solid fa-plus text-xs"></i></span></button>
+<div class="faq-answer hidden px-6 pb-6 text-stoneM font-medium leading-7 text-[15px]">نحمص يومياً ونرسل خلال 24 ساعة داخل الرياض وجدة والدمام، و48 ساعة لباقي المدن. الشحن مجاني لكل الاشتراكات، وللطلب الفردي فوق 120 ر.س.</div>
+</div>
+<div class="faq-item bg-cream rounded-2xl border border-black/5 overflow-hidden">
+<button class="faq-btn w-full flex justify-between items-center p-6 text-right font-black text-[16px]">ماذا لو لم تعجبني القهوة؟ <span class="w-8 h-8 rounded-full bg-white border flex items-center justify-center shrink-0"><i class="fa-solid fa-plus text-xs"></i></span></button>
+<div class="faq-answer hidden px-6 pb-6 text-stoneM font-medium leading-7 text-[15px]">عندنا ضمان مزاج 100%: إذا لم تعجبك، نرسل لك كيس بديل مجاناً أو نرجع المبلغ خلال 7 أيام. هدفنا أن كل بوكس يكون أحلى من اللي قبله.</div>
+</div>
+<div class="faq-item bg-cream rounded-2xl border border-black/5 overflow-hidden">
+<button class="faq-btn w-full flex justify-between items-center p-6 text-right font-black text-[16px]">هل الاشتراك يلزمني بعقد؟ <span class="w-8 h-8 rounded-full bg-white border flex items-center justify-center shrink-0"><i class="fa-solid fa-plus text-xs"></i></span></button>
+<div class="faq-answer hidden px-6 pb-6 text-stoneM font-medium leading-7 text-[15px]">أبداً. اشتراك شهري مرن، تقدر توقفه أو تؤجله بضغطة من حسابك بدون رسوم أو اتصال بخدمة العملاء.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-12">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+<div class="bg-olive rounded-[32px] p-8 lg:p-12 relative overflow-hidden">
+<div class="absolute -left-20 -top-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+<div class="grid lg:grid-cols-12 gap-8 items-center relative">
+<div class="lg:col-span-7 text-white">
+<h2 class="font-black text-[34px] lg:text-[44px] leading-none">جاهز تخلي<br>صباحك على مزاجك؟</h2>
+<p class="text-white/70 font-medium leading-7 mt-4 max-w-xl">ابدأ اختبار المزاج الآن، واحصل على أول كيس مجاناً عند الاشتراك السنوي. العرض ينتهي نهاية الأسبوع.</p>
+<div class="mt-6 flex flex-col sm:flex-row gap-3">
+<a href="#pricing" class="inline-flex justify-center items-center gap-2 bg-white text-olive px-8 py-4 rounded-full font-black hover:bg-cream transition">ابدأ اختبار المزاج المجاني</a>
+<span class="inline-flex items-center gap-2 text-white/80 text-sm font-bold"><i class="fa-solid fa-lock"></i> دفع آمن • مدى / Apple Pay / STC Pay</span>
+</div>
+</div>
+<div class="lg:col-span-5">
+<form id="leadForm" class="bg-white rounded-[24px] p-6 shadow-xl">
+<p class="font-black text-lg">احجز بوكسك الأول</p>
+<p class="text-stoneM text-sm font-medium">نرسل لك كود خصم 15% فوراً</p>
+<div class="mt-4 space-y-3">
+<input required type="text" placeholder="الاسم" class="w-full bg-cream border border-black/5 rounded-full px-4 py-3 text-sm outline-none focus:border-clay">
+<input required type="tel" placeholder="رقم الجوال" class="w-full bg-cream border border-black/5 rounded-full px-4 py-3 text-sm outline-none focus:border-clay text-right" dir="rtl">
+<input required type="email" placeholder="البريد الإلكتروني" class="w-full bg-cream border border-black/5 rounded-full px-4 py-3 text-sm outline-none focus:border-clay text-right" dir="rtl">
+<button type="submit" class="w-full bg-clay text-white py-3.5 rounded-full font-black hover:bg-clayDark transition">أرسل لي كود الخصم</button>
+<p id="formMsg" class="hidden text-center text-sm font-bold text-green-600">تم! تحقق من واتسابك — أرسلنا الكود 🎉</p>
+<p class="text-center text-xs text-stoneM font-medium">بالضغط توافق على الشروط • لا رسائل مزعجة</p>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="pt-12 pb-8 border-t border-black/5 bg-white">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-8">
+<div>
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 bg-ink rounded-xl flex items-center justify-center text-white font-black">م</div>
+<span class="font-black text-xl">مِزاج</span>
+</div>
+<p class="text-stoneM font-medium text-sm leading-6 mt-3">قهوة مختصة تُحمص على مزاجك. من محامص الرياض إلى بابك طازجة كل شهر.</p>
+<div class="flex gap-2 mt-4">
+<a href="#" class="w-9 h-9 rounded-full bg-cream border flex items-center justify-center hover:bg-ink hover:text-white transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+<a href="#" class="w-9 h-9 rounded-full bg-cream border flex items-center justify-center hover:bg-ink hover:text-white transition"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+<a href="#" class="w-9 h-9 rounded-full bg-cream border flex items-center justify-center hover:bg-ink hover:text-white transition"><i class="fa-brands fa-tiktok text-sm"></i></a>
+</div>
+</div>
+<div>
+<p class="font-black">المنتجات</p>
+<ul class="mt-3 space-y-2 text-sm font-medium text-stoneM">
+<li><a href="#" class="hover:text-ink">بوكس المزاج</a></li>
+<li><a href="#" class="hover:text-ink">قهوة الإسبرسو</a></li>
+<li><a href="#" class="hover:text-ink">قهوة الفلتر</a></li>
+<li><a href="#" class="hover:text-ink">هدايا</a></li>
+</ul>
+</div>
+<div>
+<p class="font-black">الدعم</p>
+<ul class="mt-3 space-y-2 text-sm font-medium text-stoneM">
+<li><a href="#" class="hover:text-ink">تتبع الطلب</a></li>
+<li><a href="#" class="hover:text-ink">سياسة الاسترجاع</a></li>
+<li><a href="#" class="hover:text-ink">الأسئلة الشائعة</a></li>
+<li><a href="#" class="hover:text-ink">تواصل معنا</a></li>
+</ul>
+</div>
+<div>
+<p class="font-black">النشرة</p>
+<p class="text-sm text-stoneM font-medium mt-2">وصفات وتحميصات جديدة كل أسبوع.</p>
+<form class="mt-3 flex gap-2" onsubmit="event.preventDefault(); this.querySelector('button').textContent='تم الاشتراك ✓'">
+<input type="email" required placeholder="بريدك الإلكتروني" class="flex-1 bg-cream border border-black/5 rounded-full px-4 py-2.5 text-sm outline-none">
+<button class="bg-ink text-white px-5 rounded-full font-black text-sm">اشتراك</button>
+</form>
+</div>
+</div>
+<div class="mt-10 pt-6 border-t border-black/5 flex flex-col md:flex-row justify-between gap-3 text-xs font-bold text-stoneM">
+<span>© 2026 مِزاج — جميع الحقوق محفوظة. تحميص بكل حب في الرياض.</span>
+<span class="flex gap-4"><a href="#">الخصوصية</a><a href="#">الشروط</a><a href="#">الدفع الآمن</a></span>
+</div>
+</div>
+</footer>
+
+<div class="fixed bottom-5 left-5 z-50 flex flex-col gap-3">
+<a href="https://wa.me/201226949296" target="_blank" rel="noopener" aria-label="تواصل واتساب" class="group flex items-center gap-3 bg-[#25D366] text-white pl-5 pr-3 py-3 rounded-full shadow-[0_12px_24px_rgba(37,211,102,0.35)] hover:scale-105 transition">
+<span class="hidden sm:inline font-black text-sm">واتساب</span>
+<span class="w-9 h-9 bg-white rounded-full flex items-center justify-center text-[#25D366] shrink-0">
+<svg viewBox="0 0 24 24" class="w-5 h-5 fill-current"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.03 2C6.58 2 2.15 6.42 2.15 10.86c0 1.56.41 3.08 1.18 4.42L2 22l6.89-1.81a9.85 9.85 0 0 0 4.71 1.2h.01c5.45 0 9.88-4.42 9.88-9.86 0-2.63-1.03-5.11-2.89-6.97l-.05-.05ZM12.04 19.6h-.01a8.03 8.03 0 0 1-4.09-1.12l-.29-.17-4.09 1.07 1.09-3.98-.19-.31A8.02 8.02 0 0 1 3.95 10.86c0-4.44 3.62-8.06 8.08-8.06 2.16 0 4.19.84 5.71 2.36a8.03 8.03 0 0 1 2.36 5.71c0 4.44-3.62 8.06-8.06 8.06Zm6.58-6.02c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.79-1.07-.95-1.79-2.13-2-2.49-.21-.36-.02-.55.16-.73.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.29-.7-.59-.6-.81-.61h-.69c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3 0 1.77 1.29 3.48 1.47 3.72.18.24 2.54 3.88 6.15 5.44.86.37 1.53.59 2.05.76.86.27 1.65.23 2.27.14.69-.1 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42Z"/></svg>
+</span>
+</a>
+<a href="https://t.me/+201226949296" target="_blank" rel="noopener" aria-label="تواصل تيليجرام" class="group flex items-center gap-3 bg-[#229ED9] text-white pl-5 pr-3 py-3 rounded-full shadow-[0_12px_24px_rgba(34,158,217,0.35)] hover:scale-105 transition">
+<span class="hidden sm:inline font-black text-sm">تيليجرام</span>
+<span class="w-9 h-9 bg-white rounded-full flex items-center justify-center text-[#229ED9] shrink-0">
+<svg viewBox="0 0 24 24" class="w-5 h-5 fill-current"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm3.64 7.16-1.5 7.09s-.21.5-.79.24l-2.17-1.6-1.05 1s-.12.12-.24.12l.15-2.18 4-3.62c.17-.15.04-.24-.13-.09l-4.95 3.12-2.13-.67s-.33-.1-.36-.32.36-.32.36-.32l8.34-3.22s.7-.26.47.45Z"/></svg>
+</span>
+</a>
+</div>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+menuBtn?.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+
+document.querySelectorAll('.faq-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.closest('.faq-item');
+    const ans=item.querySelector('.faq-answer');
+    const icon=btn.querySelector('i');
+    const isHidden=ans.classList.contains('hidden');
+    document.querySelectorAll('.faq-answer').forEach(a=>a.classList.add('hidden'));
+    document.querySelectorAll('.faq-btn i').forEach(i=>{i.className='fa-solid fa-plus text-xs'});
+    if(isHidden){ ans.classList.remove('hidden'); icon.className='fa-solid fa-minus text-xs'; }
+  })
+});
+
+const monthlyBtn=document.getElementById('monthlyBtn');
+const yearlyBtn=document.getElementById('yearlyBtn');
+function setPricing(mode){
+  document.querySelectorAll('.price').forEach(el=>{
+    el.textContent = mode==='yearly' ? el.dataset.yearly : el.dataset.monthly;
+  });
+  if(mode==='yearly'){ yearlyBtn.className='px-6 py-2 rounded-full bg-ink text-white font-black text-sm'; monthlyBtn.className='px-6 py-2 rounded-full font-bold text-sm text-stoneM';}
+  else { monthlyBtn.className='px-6 py-2 rounded-full bg-ink text-white font-black text-sm'; yearlyBtn.className='px-6 py-2 rounded-full font-bold text-sm text-stoneM';}
+}
+monthlyBtn?.addEventListener('click',()=>setPricing('monthly'));
+yearlyBtn?.addEventListener('click',()=>setPricing('yearly'));
+
+document.querySelectorAll('.filterBtn').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.filterBtn').forEach(x=>x.className='filterBtn px-5 py-2.5 rounded-full bg-sand font-bold text-sm');
+    b.className='filterBtn active px-5 py-2.5 rounded-full bg-ink text-white font-bold text-sm';
+    const f=b.dataset.filter;
+    document.querySelectorAll('.product').forEach(p=>{
+      if(f==='all' || p.dataset.cat===f){ p.style.display=''; } else { p.style.display='none'; }
+    })
+  })
+});
+
+document.getElementById('leadForm')?.addEventListener('submit',e=>{
+  e.preventDefault();
+  document.getElementById('formMsg').classList.remove('hidden');
+  e.target.reset();
+  setTimeout(()=>document.getElementById('formMsg').classList.add('hidden'),4000);
+});
+
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>10){ navbar.classList.add('shadow-sm','border-black/5'); navbar.classList.remove('border-transparent');}
+  else { navbar.classList.remove('shadow-sm','border-black/5'); navbar.classList.add('border-transparent');}
+});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href');
+    if(id.length>1){ e.preventDefault(); document.querySelector(id)?.scrollIntoView({behavior:'smooth'}); mobileMenu.classList.add('hidden');}
+  })
+});
+</script>
+</body>
+</html>
